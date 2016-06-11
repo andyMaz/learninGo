@@ -1,1 +1,1 @@
-text text text
+Instructions for downloading and installing the Go compilers, tools, and libraries.
