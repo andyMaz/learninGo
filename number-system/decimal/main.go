@@ -1,4 +1,4 @@
-package number_system
+package main
 
 import "fmt"
 
