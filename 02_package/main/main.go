@@ -20,8 +20,8 @@ func main() {
 	fmt.Printf("\n-----\n")
 	zero()
 	fmt.Printf("\n-----\n")
-	fmt.Printf("%d\n", factorial(6))
-	fmt.Printf("%d\n", fact(6))
+	fmt.Printf("%d\n", factorial(10))
+	fmt.Printf("%d\n", fact(10))
 }
 
 func zero() {
@@ -37,10 +37,8 @@ func zero() {
 }
 
 func factorial(n int) int {
-	var r int
-	if n == 0 {
-		r = 1
-	} else {
+	var r int = 1
+	if n > 1 {
 		r = 1
 		for i := 1; i <= n; i++ {
 			r = r * i
@@ -51,7 +49,7 @@ func factorial(n int) int {
 
 
 func fact(n int) int {
-	if n == 0 {
+	if n == 0 || n == 1 {
 		return 1
 	} else {
 		return n * fact(n - 1)
