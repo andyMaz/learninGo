@@ -11,10 +11,10 @@ func main() {
 	q := "Danny"
 	s = "Joey"
 	i := 1
-	fmt.Println(i)
-	fmt.Println(s)
-	fmt.Println(f)
-	fmt.Println(q)
+	fmt.Printf("%T\t%10d\n",i, i)
+	fmt.Printf("%T\t%10s\n",s, s)
+	fmt.Printf("%T\t%10f\n",f, f)
+	fmt.Printf("%T\t%10s\n",q, q)
 	stringutil.Name()
 	fmt.Println(stringutil.Reverse("Andy"))
 }
