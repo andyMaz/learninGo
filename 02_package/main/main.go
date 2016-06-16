@@ -17,4 +17,18 @@ func main() {
 	fmt.Printf("%T\t%10s\n",q, q)
 	stringutil.Name()
 	fmt.Println(stringutil.Reverse("Andy"))
+	fmt.Printf("\n-----\n")
+	zero()
+}
+
+func zero() {
+	var a int
+	var b string
+	var c float64
+	var d bool
+	fmt.Printf("%T\t%10d\n",a, a)
+	fmt.Printf("%T\t%10s\n",b, b)
+	fmt.Printf("%T\t%10f\n",c, c)
+	fmt.Printf("%T\t%10t\n",d, d)
+
 }
