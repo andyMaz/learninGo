@@ -21,8 +21,8 @@ func main() {
 	fmt.Printf("\n-----\n")
 	zero()
 	fmt.Printf("\n-----\n")
-	//fmt.Printf("%d\n", factorial(10))
-	//fmt.Printf("%d\n", fact(10))
+	fmt.Printf("%d\n", num_funcs.Factorial(10))
+	fmt.Printf("%d\n", num_funcs.Fact(10))
 	fmt.Printf("\n-----\n")
 	num_funcs.Fibonacci(20)
 }

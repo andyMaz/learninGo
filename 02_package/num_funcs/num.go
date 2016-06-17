@@ -2,7 +2,7 @@ package num_funcs
 
 import "fmt"
 
-func factorial(n int) int {
+func Factorial(n int) int {
 	var r int = 1
 	if n > 1 {
 		r = 1
@@ -14,21 +14,21 @@ func factorial(n int) int {
 }
 
 
-func fact(n int) int {
+func Fact(n int) int {
 	if n == 0 || n == 1 {
 		return 1
 	} else {
-		return n * fact(n - 1)
+		return n * Fact(n - 1)
 	}
 }
 
-func fib(n int) int {
+func Fib(n int) int {
 	if n == 0 {
 		return 0
 	} else if n == 1 {
 		return 1
 	} else {
-		return fib(n-2) + fib(n-1)
+		return Fib(n-2) + Fib(n-1)
 	}
 }
 
@@ -38,7 +38,7 @@ func Fibonacci(n int) {
 	}
 	fmt.Println()
 	for i := 0; i <= n; i++ {
-		fmt.Printf("%5d\t", fib(i))
+		fmt.Printf("%5d\t", Fib(i))
 	}
 	fmt.Println()
 }
