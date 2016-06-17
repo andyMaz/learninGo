@@ -13,3 +13,14 @@ func BubbleSort(a []int) {
 		}
 	}
 }
+
+func InsertSort(a []int) {
+	for i := 1; i < len(a); i++ {
+		var temp = a[i]
+		var j int
+		for j = i - 1; j >= 0 && temp < a[j]; j-- {
+			a[j+1] = a[j]
+		}
+		a[j+1] = temp
+	}
+}

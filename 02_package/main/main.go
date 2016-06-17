@@ -27,8 +27,11 @@ func main() {
 	num_funcs.Fibonacci(20)
 	stringArray()
 	ps := []int{13, 5, 11, 3, 2, 7}
+	fmt.Println("before")
 	fmt.Println(ps)
-	num_funcs.BubbleSort(ps)
+	fmt.Println("after")
+	//num_funcs.BubbleSort(ps)
+	num_funcs.InsertSort(ps)
 	fmt.Println(ps)
 
 }
