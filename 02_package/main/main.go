@@ -25,6 +25,12 @@ func main() {
 	fmt.Printf("%d\n", num_funcs.Fact(10))
 	fmt.Printf("\n-----\n")
 	num_funcs.Fibonacci(20)
+	stringArray()
+	ps := []int{13, 5, 11, 3, 2, 7}
+	fmt.Println(ps)
+	num_funcs.BubbleSort(ps)
+	fmt.Println(ps)
+
 }
 
 func zero() {
@@ -36,5 +42,17 @@ func zero() {
 	fmt.Printf("%T\t%10s\n",b, b)
 	fmt.Printf("%T\t%10f\n",c, c)
 	fmt.Printf("%T\t%10t\n",d, d)
-
 }
+
+func stringArray() {
+	var a [2]string
+	a[0] = "Hello"
+	a[1] = "World"
+	fmt.Println(a[0], a[1])
+	fmt.Println(a)
+
+	primes := [6]int{2, 3, 5, 7, 11, 13}
+	fmt.Println(primes)
+}
+
+
