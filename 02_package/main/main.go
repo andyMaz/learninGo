@@ -62,7 +62,7 @@ func stringArray() {
 }
 
 func randArray(n int) []int {
-	a := make([]int, n, 2*n)
+	a := make([]int, n, n)
 	for i := 0; i < n; i++ {
 		a[i] = rand.Intn(10000)%100 + 1
 	}
