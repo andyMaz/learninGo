@@ -24,7 +24,6 @@ func main() {
 	//fmt.Printf("%d\n", factorial(10))
 	//fmt.Printf("%d\n", fact(10))
 	fmt.Printf("\n-----\n")
-	num_funcs.
 	num_funcs.Fibonacci(20)
 }
 

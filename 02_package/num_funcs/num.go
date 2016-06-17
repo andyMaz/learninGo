@@ -1,4 +1,4 @@
-package stringutil
+package num_funcs
 
 import "fmt"
 
