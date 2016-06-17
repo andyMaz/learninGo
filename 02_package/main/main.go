@@ -4,6 +4,7 @@ import (
 	"fmt"
 	"github.com/andyMaz/learninGo/02_package/stringutil"
 	"github.com/andyMaz/learninGo/02_package/num_funcs"
+	"math/rand"
 )
 var s string
 
@@ -25,14 +26,16 @@ func main() {
 	fmt.Printf("%d\n", num_funcs.Fact(10))
 	fmt.Printf("\n-----\n")
 	num_funcs.Fibonacci(20)
-	stringArray()
-	ps := []int{13, 5, 11, 3, 2, 7}
-	fmt.Println("before")
-	fmt.Println(ps)
-	fmt.Println("after")
-	//num_funcs.BubbleSort(ps)
-	num_funcs.InsertSort(ps)
-	fmt.Println(ps)
+	//stringArray()
+	fmt.Printf("\n-----\n")
+	fmt.Print("BubbleSort")
+	var ary1 = randArray(30)
+	num_funcs.BubbleSort(ary1)
+	printArray(ary1)
+	fmt.Print("\nInsertSort")
+	var ary2 = randArray(30)
+	num_funcs.InsertSort(ary2)
+	printArray(ary2)
 
 }
 
@@ -56,6 +59,24 @@ func stringArray() {
 
 	primes := [6]int{2, 3, 5, 7, 11, 13}
 	fmt.Println(primes)
+}
+
+func randArray(n int) []int {
+	a := make([]int, n, 2*n)
+	for i := 0; i < n; i++ {
+		a[i] = rand.Intn(10000)%100 + 1
+	}
+	return a
+}
+
+func printArray(a []int) {
+	for i := 0; i < len(a); i++ {
+		if i%10 == 0 {
+			fmt.Println()
+		}
+		fmt.Printf("%5d", a[i])
+
+	}
 }
 
 
