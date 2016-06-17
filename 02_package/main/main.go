@@ -1,8 +1,9 @@
 package main
 
 import (
-	"github.com/andyMaz/learninGo/02_package/stringutil"
 	"fmt"
+	"github.com/andyMaz/learninGo/02_package/stringutil"
+	"github.com/andyMaz/learninGo/02_package/num_funcs"
 )
 var s string
 
@@ -20,10 +21,11 @@ func main() {
 	fmt.Printf("\n-----\n")
 	zero()
 	fmt.Printf("\n-----\n")
-	fmt.Printf("%d\n", factorial(10))
-	fmt.Printf("%d\n", fact(10))
+	//fmt.Printf("%d\n", factorial(10))
+	//fmt.Printf("%d\n", fact(10))
 	fmt.Printf("\n-----\n")
-	Fibonacci(20)
+	num_funcs.
+	num_funcs.Fibonacci(20)
 }
 
 func zero() {
@@ -36,45 +38,4 @@ func zero() {
 	fmt.Printf("%T\t%10f\n",c, c)
 	fmt.Printf("%T\t%10t\n",d, d)
 
-}
-
-func factorial(n int) int {
-	var r int = 1
-	if n > 1 {
-		r = 1
-		for i := 1; i <= n; i++ {
-			r = r * i
-		}
-	}
-	return r
-}
-
-
-func fact(n int) int {
-	if n == 0 || n == 1 {
-		return 1
-	} else {
-		return n * fact(n - 1)
-	}
-}
-
-func fib(n int) int {
-	if n == 0 {
-		return 0
-	} else if n == 1 {
-		return 1
-	} else {
-		return fib(n-2) + fib(n-1)
-	}
-}
-
-func Fibonacci(n int) {
-	for i := 0; i <= n; i++ {
-		fmt.Printf("%5d\t", i)
-	}
-	fmt.Println()
-	for i := 0; i <= n; i++ {
-		fmt.Printf("%5d\t", fib(i))
-	}
-	fmt.Println()
 }
