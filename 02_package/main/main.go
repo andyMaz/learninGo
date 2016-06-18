@@ -60,6 +60,8 @@ func stringArray() {
 	fmt.Println(primes)
 
 	// here are how to invoke higher order functions
+	// three different ways of calling function funcPara
+	// that requires function as parameter
 	g := func(x int) int {
 		x++
 		return x
@@ -70,8 +72,11 @@ func stringArray() {
 		x--
 		return x
 	}, primes)
+	funcPara(add2, primes)
 	fmt.Printf("%d\n", funcResult(3)(4))
 }
+
+
 // the following two functions are higher order functions
 // an example of func that accepts function as parameter
 func funcPara(f func(int) int, a []int) {
@@ -86,5 +91,9 @@ func funcResult(x int) func(int) int {
 	return func(y int) int {
 		return x+y
 	}
+}
+
+func add2(x int) int {
+	return x+2
 }
 
