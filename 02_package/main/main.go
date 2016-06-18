@@ -25,7 +25,7 @@ func main() {
 	fmt.Printf("%d\n", num_funcs.Fact(10))
 	fmt.Printf("\n-----\n")
 	num_funcs.Fibonacci(20)
-	//stringArray()
+	stringArray()
 	fmt.Printf("\n-----\n")
 	fmt.Print("BubbleSort")
 	var ary1 = num_funcs.RandArray(30)
@@ -56,8 +56,35 @@ func stringArray() {
 	fmt.Println(a[0], a[1])
 	fmt.Println(a)
 
-	primes := [6]int{2, 3, 5, 7, 11, 13}
+	primes := []int{2, 3, 5, 7, 11, 13}
 	fmt.Println(primes)
+
+	// here are how to invoke higher order functions
+	g := func(x int) int {
+		x++
+		return x
+	}
+	fmt.Printf("%T\n",g)
+	funcPara(g, primes)
+	funcPara(func(x int) int {
+		x--
+		return x
+	}, primes)
+	fmt.Printf("%d\n", funcResult(3)(4))
+}
+// the following two functions are higher order functions
+// an example of func that accepts function as parameter
+func funcPara(f func(int) int, a []int) {
+	for i := 0; i < len(a); i++ {
+		fmt.Printf("%3d\t", f(a[i]))
+	}
+	fmt.Println()
 }
 
+// an example of func that returns a function as result
+func funcResult(x int) func(int) int {
+	return func(y int) int {
+		return x+y
+	}
+}
 
