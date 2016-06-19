@@ -1,7 +1,5 @@
 package stringutil
 
-import "fmt"
-
-func Name() {
-	fmt.Println("Andy")
+func Name() string {
+	return "Andy"
 }

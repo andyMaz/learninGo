@@ -36,7 +36,12 @@ func main() {
 	num_funcs.InsertSort(ary2)
 	num_funcs.PrintArray(ary2)
 	test("Hi Danny")
+	fmt.Printf("\n%s\n", stringutil.Test())
 
+}
+
+func test(n string) {
+	fmt.Printf("\n%s", n)
 }
 
 func zero() {
@@ -49,6 +54,9 @@ func zero() {
 	fmt.Printf("%T\t%10f\n",c, c)
 	fmt.Printf("%T\t%10t\n",d, d)
 }
+
+
+
 
 func stringArray() {
 	var a [2]string
