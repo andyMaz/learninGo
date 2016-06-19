@@ -35,6 +35,7 @@ func main() {
 	var ary2 = num_funcs.RandArray(30)
 	num_funcs.InsertSort(ary2)
 	num_funcs.PrintArray(ary2)
+	test("Hi Danny")
 
 }
 
