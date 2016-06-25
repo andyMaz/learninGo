@@ -32,5 +32,25 @@ func main() {
 	fmt.Println(X)
 	fmt.Println(Y)
 
+	as := []int{4,6,3,10,16,1,8,23,15}
+	b := isIn(10, as)
+	fmt.Println(b)
+	print(as)
 
+}
+
+func print(ls []int)  {
+	for i := range ls {
+		fmt.Printf("%d\t", ls[i])
+	}
+	fmt.Println()
+}
+
+func isIn(e int, ls []int) bool {
+	for i := range ls {
+		if ls[i] == e {
+			return true
+		}
+	}
+	return false
 }
