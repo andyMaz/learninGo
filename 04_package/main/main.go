@@ -33,9 +33,10 @@ func main() {
 	fmt.Println(Y)
 
 	as := []int{4,6,3,10,16,1,8,23,15}
-	b := isIn(10, as)
+	b := isIn2(21, as)
 	fmt.Println(b)
 	print(as)
+	loopy(as)
 
 }
 
@@ -46,11 +47,28 @@ func print(ls []int)  {
 	fmt.Println()
 }
 
-func isIn(e int, ls []int) bool {
+func isIn2(e int, ls []int) bool {
 	for i := range ls {
 		if ls[i] == e {
 			return true
 		}
 	}
 	return false
+}
+
+func isIn(e int, ls []int) bool {
+	for _, y := range ls {
+		if y == e {
+			return true
+		}
+	}
+	return false
+}
+
+func loopy(ls []int) {
+	for x, y := range ls {
+		fmt.Print(x, "\t")
+		fmt.Println(y)
+	}
+
 }
