@@ -9,6 +9,8 @@ func main() {
 	Loop1(10)
 	printNums(10)
 	ary()
+	x, y := two(10, "desk")
+	fmt.Printf("%d\t%s\n", x, y)
 }
 
 func Loop1(n int) {
@@ -52,3 +54,7 @@ func ary() {
 	fmt.Println(x)
 }
 
+
+func two(x int, y string) (int, string) {
+	return x, y
+}
