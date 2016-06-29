@@ -11,10 +11,6 @@ func BubbleSort(a []int) {
 	}
 }
 
-func swap(x, y int) (int, int) {
-	return y, x
-}
-
 
 func InsertSort(a []int) {
 	for i := 1; i < len(a); i++ {
@@ -25,4 +21,8 @@ func InsertSort(a []int) {
 		}
 		a[j+1] = temp
 	}
+}
+
+func swap(x, y int) (int, int) {
+	return y, x
 }
