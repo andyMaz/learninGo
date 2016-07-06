@@ -7,13 +7,14 @@ import (
 	"fmt"
 )
 
+const dir = "C:/Users/andrei/Documents/GitHub/Goworkspace/src/github.com/andyMaz/learninGo/02_package/num_funcs/"
 
 func main() {
 	echo()
 }
 
 func echo() {
-	fileName := "main.go"
+	fileName := dir + "sort.go"
 	f, err := os.Open(fileName)
 	if err != nil {
 		log.Fatal(err)

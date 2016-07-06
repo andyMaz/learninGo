@@ -5,7 +5,7 @@ func BubbleSort(a []int) {
 	for i := 0; i < n; i++  {
 		for j := 1; j < n-i; j++ {
 			if a[j-1] > a[j]  {
-				a[j-1], a[j] = swap(a[j-1], a[j])
+				a[j-1], a[j] = a[j], a[j-1] //simple swap
 			}
 		}
 	}
@@ -23,6 +23,7 @@ func InsertSort(a []int) {
 	}
 }
 
+// easier just to perform simple swap
 func swap(x, y int) (int, int) {
 	return y, x
 }

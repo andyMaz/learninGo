@@ -1,10 +1,14 @@
 package main
-import (
-	"net/http"
-)
+ import (
+	 "net/http"
+	 "io/ioutil"
+	 "fmt"
+ )
+
 func main() {
-	mux := http.NewServeMux()
-	fs := http.FileServer(http.Dir("public"))
-	mux.Handle("/", fs)
-	http.ListenAndServe(":8080", mux)
+	res, _ := http.Get("http://www.bbc.co.uk/sport/")
+	page, _ := 	 ioutil.ReadAll(res.Body)
+	res.Body.Close()
+	fmt.Printf("%s", page)
+
 }

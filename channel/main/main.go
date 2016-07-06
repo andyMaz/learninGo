@@ -7,7 +7,7 @@ import (
 )
 
 const max = 10000000
-func sum(s []int, ch chan<- int) {
+func sum(s []int, ch chan <- int) {
 	sum := 0
 	for _, v := range s {
 		sum += v
