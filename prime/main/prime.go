@@ -13,13 +13,13 @@ func main() {
 	for _, v := range initials {
 		primes.PushBack(v)
 	}
-	primeNumbers(100)
+	primeNumbers(1009)
 	count := 0
 	for e := primes.Front(); e != nil; e = e.Next() {
 		if count%10 == 0 {
 			fmt.Println()
 		}
-		fmt.Printf("%d\t", e.Value)
+		fmt.Printf("%d\t\t", e.Value)
 		count++
 	}
 	fmt.Println()
