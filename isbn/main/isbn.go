@@ -12,9 +12,15 @@ func main() {
 		fmt.Printf("%d  ", v)
 	}
 	fmt.Printf("\n")
-	rs := isbnStr("0191012203")
+	isbn := "0191012203"
+	rs := isbnStr(isbn)
 
-	fmt.Printf("%d", rs)
+	fmt.Printf("%d\n", rs)
+	if validISBN(isbn) {
+		fmt.Printf("%s %s\n", isbn, "a valid isbn" )
+	} else {
+		fmt.Printf("%s %s\n", isbn, "not a valid isbn" )
+	}
 
 }
 
@@ -38,5 +44,8 @@ func isbnStr(ns string) int {
 		m--
 	}
 	return result
+}
 
+func validISBN(ns string) bool {
+	return  isbnStr(ns)%11 == 0
 }
