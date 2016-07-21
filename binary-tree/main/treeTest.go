@@ -3,6 +3,7 @@ package main
 import (
 	"github.com/andyMaz/learninGo/binary-tree/tree"
 	"fmt"
+	"github.com/andyMaz/learninGo/linked-list/linkedList"
 )
 
 func main() {
@@ -15,5 +16,9 @@ func main() {
 	tree.In_order(t)
 	fmt.Println()
 	tree.Level_by_level(t)
+	fmt.Println()
+	l := tree.Flat(t)
+	s := linkedList.LstToSting(l)
+	fmt.Println(s)
 
 }

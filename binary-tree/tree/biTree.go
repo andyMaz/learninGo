@@ -3,6 +3,7 @@ package tree
 import (
 	"fmt"
 	"strconv"
+	"github.com/andyMaz/learninGo/linked-list/linkedList"
 )
 
 type Tree struct {
@@ -49,6 +50,7 @@ func depth(t *Tree) int {
 	return 1 + max(depth(t.left), depth(t.right))
 }
 
+
 func depthN(n int, t *Tree)  string {
 	if n == 0 || t == nil {
 		return ""
@@ -56,6 +58,15 @@ func depthN(n int, t *Tree)  string {
 		return strconv.Itoa(t.data) + " "
 	}
 	return depthN(n-1, t.left) +  depthN(n-1, t.right)
+}
+
+func depthNlist(n int, t *Tree)   *linkedList.List {
+	if n == 0 || t == nil {
+		return nil
+	} else if n == 1 && t != nil {
+		return linkedList.ConsBack(t.data, nil)
+	}
+	return linkedList.Concat(depthNlist(n-1, t.left),  depthNlist(n-1, t.right))
 }
 
 func size(t *Tree) int {
@@ -71,6 +82,14 @@ func Level_by_level(t *Tree){
 		n = depth(t)
 	}
 	for i := 1; i < n+1; i++ {
-		fmt.Printf("%d -> %s\n", i, depthN(i, t))
+		s := linkedList.LstToSting(depthNlist(i, t))
+		fmt.Printf("%d -> %s\n", i, s)
 	}
+}
+
+func Flat(t *Tree) *linkedList.List {
+	if t == nil {
+		return nil
+	}
+	return linkedList.Concat(linkedList.ConsFront(t.data, Flat(t.left)), Flat(t.right))
 }
