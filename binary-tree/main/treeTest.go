@@ -20,5 +20,7 @@ func main() {
 	l := tree.Flat(t)
 	s := linkedList.LstToSting(l)
 	fmt.Println(s)
+	fmt.Println("\n BFS")
+	tree.Bfs(t)
 
 }

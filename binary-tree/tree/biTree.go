@@ -4,6 +4,7 @@ import (
 	"fmt"
 	"strconv"
 	"github.com/andyMaz/learninGo/linked-list/linkedList"
+	"container/list"
 )
 
 type Tree struct {
@@ -93,3 +94,20 @@ func Flat(t *Tree) *linkedList.List {
 	}
 	return linkedList.Concat(linkedList.ConsFront(t.data, Flat(t.left)), Flat(t.right))
 }
+
+func  Bfs(t *Tree) {
+	var que = list.New()
+	que.PushBack(t)
+	for que.Len() > 0 {
+		v := que.Front()
+		child := [] *Tree{0: v.Value.(*Tree).left, 1: v.Value.(*Tree).right}
+		fmt.Printf("%d\t", v.Value.(*Tree).data)
+		que.Remove(v)
+		for i := range child {
+			if child[i] != nil {
+				que.PushBack(child[i])
+			}
+		}
+	}
+}
+
