@@ -25,4 +25,12 @@ func main() {
 	fmt.Println("\n DFS")
 	tree.Dfs(t)
 
+	var t1 *tree.Tree
+	for i := 1; i < 16; i++ {
+		t1 = tree.Binsert(i, t1)
+	}
+
+	fmt.Println("\n---------\n")
+	tree.Level_by_level(t1)
+	fmt.Println()
 }

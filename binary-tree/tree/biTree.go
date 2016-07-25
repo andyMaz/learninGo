@@ -13,8 +13,6 @@ type Tree struct {
 	right *Tree
 }
 
-
-
 func Cons(l *Tree, d int, r *Tree) *Tree {
 	return &Tree {left : l, data : d, right : r}
 }
