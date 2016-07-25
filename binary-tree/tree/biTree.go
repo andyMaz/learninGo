@@ -111,3 +111,13 @@ func  Bfs(t *Tree) {
 	}
 }
 
+func  Dfs(t *Tree) {
+	if t != nil {
+		fmt.Printf("%d\t", t.data)
+		children := [] *Tree{0: t.left, 1: t.right}
+		for _, child := range children {
+			Dfs(child)
+		}
+	}
+}
+

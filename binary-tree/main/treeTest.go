@@ -22,5 +22,7 @@ func main() {
 	fmt.Println(s)
 	fmt.Println("\n BFS")
 	tree.Bfs(t)
+	fmt.Println("\n DFS")
+	tree.Dfs(t)
 
 }
